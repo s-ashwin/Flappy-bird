@@ -1,3 +1,3 @@
 # Flappy-bird
 
-[PLAY](https://s-ashwin.github.io/Flappy-bird/)
+[Play](https://s-ashwin.github.io/flappy-bird/)
