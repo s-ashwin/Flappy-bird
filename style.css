@@ -53,7 +53,7 @@ button:focus{
 button:hover{
     transform: scale(1.1);
 }
-#en{
+#end{
     display: none;
 }
 .bars{

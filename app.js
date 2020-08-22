@@ -8,26 +8,26 @@ let jumping = 0;
 let score =0;
 let change;
 
-let startg = function(){  
+let startgame = function(){  
 
     logo.style.display = "none"
-    document.querySelector('#st').style.display= "none"
+    document.querySelector('#start').style.display= "none"
     bird.style.display = "block"
     bars.style.display = "block"
     bars.classList.add("animate")
-    let down = setInterval(dow,10)
-     change = setInterval(()=>{
+    let down = setInterval(gravity,10)
+    change = setInterval(()=>{
         space.style.top = Math.floor(Math.random() * 351)+"px"; 
         score++
         pts.innerHTML = "Score :" + score
     },1500)
 }
 
-let endg = function(){
+let retry = function(){
     window.location.reload()
 }
 
-let dow = function(){
+let gravity = function(){
     var btop = parseInt(window.getComputedStyle(bird).getPropertyValue("top"));
    if(btop<450 && jumping==0){
       bird.style.top = (btop + 3) + "px"; 
@@ -75,7 +75,7 @@ var check = setInterval(() => {
                         logo.style.display = "block"
                         logo.innerHTML = "OOPS!"
                         clearInterval(change)
-                        document.querySelector('#en').style.display= "block"
+                        document.querySelector('#end').style.display= "block"
                     }
                 }
             else{
